@@ -10,7 +10,7 @@ struct ContentView: View {
         TextField("Number 1", value: $number1, format: .number)
         TextField("Number 2", value: $number2, format: .number)
         Button("Multiply") {
-            <#code#>
+            answer = number1 * number2
         }
         Text("\(answer)")
     
