@@ -8,21 +8,32 @@ struct ContentView: View {
     
     var body: some View {
         TextField("Number 1", value: $number1, format: .number)
+            .textFieldStyle(.roundedBorder)
+            .padding()
         TextField("Number 2", value: $number2, format: .number)
+            .textFieldStyle(.roundedBorder)
+            .padding()
         Button("Multiply") {
             answer = number1 * number2
-            
         }
+        .clipShape(Rectangle())
+        .foregroundColor(.red)
         Button("Add") {
             answer = number1 + number2
         }
+        .clipShape(Circle())
+        .foregroundColor(.blue)
         Button("Subtract") {
             answer = number1 - number2
         }
+        .clipShape(Circle())
+        .foregroundColor(.blue)
         Button("Divide") {
             answer = number1 / number2
         }
-        Text("\(answer)")
+        .foregroundColor(.blue)
         
+        Text("\(answer)")
+            .font(.title)
     }
 }
